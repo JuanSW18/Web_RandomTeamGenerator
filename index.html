@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Team - Themes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Random Team - Themes</h1>
+    <p id="description">En esta web usted podrá crear grupos aleatoriamente, solo debe ingresar el número de grupos que quiere formar
+        y la lista total integrantes para el sorteo. Opcionalmente puede ingresar temas de exposicion para cada
+        grupo que se vaya a formar.
+    </p>
+    <div class="content">
+        <div>
+            <label for="nro_grupos"><b>N° de grupos: </b></label>
+            <input type="number" min=0 id="nro_grupos" name="nro_grupos" required>
+        </div>
+        <div class="div_content">
+            <div>
+                <label for="integrantes"><b>Integrantes</b></label><br>
+                <textarea name="integrantes" id="integrantes" cols="30" rows="10"
+                    placeholder="Ingrese el nombre de los integrantes separado por comas" required></textarea>
+            </div>
+            <div>
+                <label for="temas"><b>Temas de exposición</b></label><br>
+                <textarea name="temas" id="temas" cols="30" rows="10"
+                    placeholder="Ingrese el nombre de cada tema separado por comas"></textarea>
+            </div>
+        </div>
+        <input class="btn_make" type="button" value="Sortear" onclick="validData()"><br>
+    </div>
+    <div class="content_resultados">
+        <h3>Resultados:</h3>
+        <div id="resultados" name="resultados">
+        </div>
+    </div>
+    <footer>&copy;2019 - <a href="https://github.com/JuanSW18" target="__blank">JuanSW18</a></footer>
+</body>
+
+</html>
